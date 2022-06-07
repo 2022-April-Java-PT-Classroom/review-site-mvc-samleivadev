@@ -2,13 +2,13 @@ package org.wecancoeit.reviews;
 
 public class Review {
     private Long id;
-    private String product;
+    private String team;
     private String image;
     private String review;
 
-    public Review (Long id, String product, String image, String review) {
+    public Review (Long id, String team, String image, String review) {
         this.id = id;
-        this.product = product;
+        this.team = team;
         this.image = image;
         this.review = review;
     }
@@ -17,8 +17,8 @@ public class Review {
         return id;
     }
 
-    public String getProduct() {
-        return product;
+    public String getTeam() {
+        return team;
     }
 
     public String getImage() {
