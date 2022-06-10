@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+    <link rel="stylesheet" href="style.css">
+    <title>Soccer Teams Reviews</title>
+</head>
+<body>
+
+    <div class="scrolling">
+        <h4>REAL MADRID FC (Spain) - UEFA Champions League 2022</h4>
+    </div>
+
+    <div class="container">
+        <div class=banner>
+            <img src="images\reviewsite.png" alt="ReviewsBanner" class="hero">
+        </div>
+
+    <div class="header">
+        <h1 class="h1">Reviews for the Top 5 Soccer Teams in the world</h1>
+    </div>
+
+    <div class="main">
+            <article th:each="review: ${reviewsModel}">
+                <a th:href="@{/review(id=${review.id})}"><img th:src="${review.image}" alt="teams" class="teams__img"></a>
+            </article>
+
+
+    </div>
+
+    <footer class="footer">
+        <small>@copy Samuel Leiva 2022 - Review page only for testing purposes</small>
+    </footer>
+</div>
+</body>
+
+</html>
